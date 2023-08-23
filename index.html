@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Übung</title>
+    <style>
+      /* Geordnete Liste über Früchte */
+      .a {
+        border: 2px;
+        padding: 15px;
+        /*rahmen*/
+        border: tomato 4px solid;
+        grid-column-start: 2;
+      }
+      /* Ungeordnete Liste über Gemüse */
+      .b {
+        border: 2px;
+        padding: 15px;
+        /*rahmen*/
+        border: aqua 4px solid;
+      }
+      /* Beschreibungsliste über ein Rezept deiner Wahl */
+      .c {
+        border: 2px;
+        padding: 15px;
+        /*rahmen*/
+        border: violet 4px solid;
+        grid-column-end: span 2;
+      }
+      /* Tabelle mit 3 Spalten und 4 Zeilen (Spalten: Produkt, Menge, Preis) */
+      .d {
+        border: 10px;
+        padding: 15px;
+        /*rahmen*/
+        border: turquoise 4px solid;
+      }
+      /* Auswahlliste über Sprachen (Deutsch, Englisch, Polnisch, Arabisch,
+        Türkisch) */
+      .e {
+        border: 2px;
+        padding: 15px;
+        /*rahmen*/
+        border: yellow 4px solid;
+      }
+      /* Formular mit Eingabelder (Input, Textarea, Button : Vorname, Nachname,
+        E-Mail, Telefon, Nachricht, Senden) */
+      .f {
+        border: 2px;
+        padding: 15px;
+        /*rahmen*/
+        border: teal 4px solid;
+        border-radius: 15px;
+        padding: 15px;
+        margin: 15px;
+        grid-column-end: span 2;
+      }
+      /* 3 Bilder über Essen (z.B. Pizza, Döner, ...) */
+      /* Die Bilder sollen flexible angeordnet werden. Dabei sollen
+       * die Bilder durchgestreckt positioniert werden. Wenn nicht
+       * genug Platz verfügbar ist, soll auf die nächste Zeile
+       * gebrochen werden (FLEX + WRAP) */
+      .g {
+        background-color: springgreen;
+        display: flex; /* FLEX */
+        flex-wrap: wrap; /* Zeile brechen */
+        justify-content: space-between; /* Durchstrecken */
+      }
+      /* Paragraph mit Text (Einzelne Wörter in Groß, Klein, Fett, Schräg/Kursiv,
+        Unterstreichen) */
+      .h {
+        /*text farbe*/
+        color: darkred;
+        text-align: right;
+      }
+      /* BODY soll ein Grid sein mit 2 Spalten. Das Element mit der Klasse
+         c und das Element mit der Klasse f sollen zwei Spalten breit sein.
+         Das Element a soll ab der zweiten Spalte beginnen. (GRID) */
+      body {
+        display: grid;
+        background-color: saddlebrown;
+        padding: 10px;
+        grid-template-columns: 50% 50%;
+        /*text farbe*/
+        color: black;
+      }
+      img {
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+      Alle HTML-Elemente sollen eine Hintergrundfarbe, eine Textfarbe
+      eine andere Schriftgröße, inneren Abstand, sowie einen Rahmen
+      und manche Elemente noch einen Schatten haben
+    -->
+    <div class="a">
+      <h3>Geordnete Liste über Früchte</h3>
+      <!-- Dein Code -->
+      <ol>
+        <li>brot</li>
+        <li>milch</li>
+        <li>käse</li>
+        <li>butter</li>
+      </ol>
+    </div>
+    <div class="b">
+      <h3>Ungeordnete Liste über Gemüse</h3>
+      <!-- Dein Code -->
+      <ul>
+        <li>tomaten</li>
+        <li>kartofel</li>
+        <li>salat</li>
+        <li>gürken</li>
+      </ul>
+    </div>
+
+    <div class="c">
+      <h3>Beschreibungsliste über ein Rezept deiner Wahl</h3>
+      <!-- Dein Code -->
+      <dl>
+        <dt>käsekuchen</dt>
+        <dd>milch</dd>
+        <dd>käse</dd>
+        <dd>sclagsahne</dd>
+        <dd>zucker</dd>
+      </dl>
+    </div>
+    <div class="d">
+      <h3>
+        Tabelle mit 3 Spalten und 4 Zeilen (Spalten: Produkt, Menge, Preis)
+      </h3>
+      <!-- Dein Code -->
+      <table>
+        <tr>
+          <th>Produkt</th>
+          <th>mange</th>
+          <th>Preis</th>
+        </tr>
+        <tr>
+          <td>milch</td>
+          <td>2l</td>
+          <td>3€</td>
+        </tr>
+        <tr>
+          <td>käse</td>
+          <td>500g</td>
+          <td>5€</td>
+        </tr>
+        <tr>
+          <td>zuker</td>
+          <td>1kl</td>
+          <td>2€</td>
+        </tr>
+        <tr>
+          <td>sclagsane</td>
+          <td>200g</td>
+          <td>4€</td>
+        </tr>
+      </table>
+    </div>
+    <div class="e">
+      <h3>
+        Auswahlliste über Sprachen (Deutsch, Englisch, Polnisch, Arabisch,
+        Türkisch)
+      </h3>
+      <!-- Dein Code -->
+      <select>
+        <option>deutsch</option>
+        <option>Englisch</option>
+        <option>Polnisch</option>
+        <option>Arabisch</option>
+      </select>
+    </div>
+    <div class="f">
+      <h3>
+        Formular mit Eingabelder (Input, Textarea, Button : Vorname, Nachname,
+        E-Mail, Telefon, Nachricht, Senden)
+      </h3>
+      <!-- Dein Code -->
+      <form>
+        Vorname:<input type="text" /><br />
+        nachname:<input type="text" /><br />
+        E-Mail:<input type="text" /><br />
+        Telefon:<input type="number" /><br />
+        Vorname:<textarea></textarea>>br/> ><button>Senden</button>
+      </form>
+    </div>
+    <div class="g">
+      <h3>3 Bilder über Essen (z.B. Pizza, Döner, ...)</h3>
+      <!-- Dein Code -->
+      <img
+        src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2017/11/24/17/istock-537640710.jpg"
+      />
+      <img src="https://images6.alphacoders.com/698/698287.jpg" />
+      <img
+        src="https://th.bing.com/th/id/R.a90f420ad8c71c3aacf28f87de3f1708?rik=A5WC8v2va1qFGg&riu=http%3a%2f%2f4.bp.blogspot.com%2f-n-jZjyEzncE%2fUq8IxN6-giI%2fAAAAAAAADWk%2fOL-YhSPEG_4%2fs1600%2fPizza%2bFood%2bHd%2bWallpaper.jpg&ehk=P%2f8NwSvvwjLvNExGqNkmVRip5lATlUieTUwxOT6m2D0%3d&risl=&pid=ImgRaw&r=0"
+      />
+    </div>
+    <div class="h">
+      <h3>
+        Paragraph mit Text (Einzelne Wörter in Groß, Klein, Fett, Schräg/Kursiv,
+        Unterstreichen)
+      </h3>
+      <!-- Dein Code -->
+      <h3>
+        <p>
+          Beste Pizza Restaurants in <b>Heidelberg</b>,
+          <big> Baden-Württemberg</big> Tripadvisor Bewertungen
+          <small>von </small> in Heidelberg finden und die Suche nach Küche,
+          <i> Preis</i>, Lage …
+        </p>
+      </h3>
+    </div>
+  </body>
+</html>
